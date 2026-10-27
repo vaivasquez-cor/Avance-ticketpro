@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.ticketpro.controller.EntradaController">
+   <center>
+      <Pane prefHeight="511.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="76.0" layoutY="51.0" text="Registro de entradas">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="labelCodigo" layoutX="76.0" layoutY="83.0" text="Código">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="labelEvento" layoutX="257.0" layoutY="83.0" text="Evento">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="labelPrBa" layoutX="76.0" layoutY="168.0" text="Precio base" />
+            <Label fx:id="labelTe" layoutX="257.0" layoutY="168.0" text="Tipo de entrada" />
+            <Label fx:id="labelDes" disable="true" layoutX="76.0" layoutY="236.0" text="Descuento (%)" visible="false" />
+            <Button fx:id="ButtonReg" layoutX="90.0" layoutY="285.0" mnemonicParsing="false" onAction="#agregarProducto" style="-fx-background-color: black;" text="+ Registrar" textFill="WHITE" />
+            <Button fx:id="buttonEl" layoutX="248.0" layoutY="285.0" mnemonicParsing="false" onAction="#eliminarProducto" style="-fx-background-color: w;" text="Eliminar" textFill="#808080" />
+            <TextField fx:id="textFieldCodigo" layoutX="76.0" layoutY="100.0" promptText="Ej.:ENT003" />
+            <TextField fx:id="textFieldEvento" layoutX="257.0" layoutY="100.0" />
+            <TextField fx:id="textFieldPrBa" layoutX="76.0" layoutY="185.0" />
+            <TextField fx:id="textFieldDes" layoutX="76.0" layoutY="253.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="343.0" promptText="Ej.:15" visible="false" />
+            <TableView fx:id="tableViewRe" layoutX="105.0" layoutY="327.0" prefHeight="175.0" prefWidth="300.0">
+              <columns>
+                <TableColumn fx:id="tableColumnCodigo" prefWidth="93.0" text="Código" />
+                <TableColumn fx:id="tableColumnEvento" prefWidth="107.0" text="Evento" />
+                  <TableColumn fx:id="tableColumnPrecioB" prefWidth="99.0" text="Precio base " />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="comboBoxTe" layoutX="256.0" layoutY="185.0" prefWidth="150.0" promptText="VIP" />
+            <Label fx:id="labelNuAs" layoutX="76.0" layoutY="228.0" text="Número asiento" visible="false" />
+            <TextField fx:id="textFieldNuAs" layoutX="76.0" layoutY="253.0" prefHeight="25.0" prefWidth="329.0" visible="false" />
+            <Label fx:id="labelMensaje" layoutX="48.0" layoutY="516.0" prefHeight="17.0" prefWidth="414.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
